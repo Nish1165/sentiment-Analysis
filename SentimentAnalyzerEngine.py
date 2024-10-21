@@ -6,8 +6,12 @@ from flask import Flask, request, jsonify, render_template
 # Initialize Flask app
 app = Flask(__name__)
 
-# Use raw string notation for the file path to avoid issues with backslashes
-model_path = r'A:\B.Tech CSE\B.Tech sem - 5\Introduction to Big Data Tools and Techniques\Sentiment Analysis Project\Sentiment_Analysis_Case_Study\sentimentanalysis\models\model\classifier.pkl'
+app = Flask(__name__)
+
+# Use a relative path to load the model from the repository
+base_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(base_dir, 'classifier.pkl')
+
 
 # Load the classifier model
 try:
