@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <style>
+        body {
+            background-color: powderblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            background-color: orange;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            background-color: #ffa500;
+            padding: 15px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="vertical-center">
+        <h2>Sentiment Analyzer Engine Output</h2>
+        <table>
+            <tr>
+                <th>Prediction Label</th>
+                <th>Sentiment</th>
+            </tr>
+            <tr>
+                <td>{{ pred }}</td>
+                <td>{{ sent }}</td>
+            </tr>
+        </table>
+        <p style="font-size: 48px;">
+            &#128512; &#128516; &#128517; &#128514;
+        </p>
+        <p>
+            <button onclick="history.back()">Go Back</button>
+        </p>
+    </div>
+</body>
+</html>
